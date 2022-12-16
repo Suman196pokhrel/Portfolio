@@ -10,7 +10,10 @@ const Hero = () => {
     const [text, count] = useTypewriter({
         words: ["Hi , The name's Suman-Pokhrel. A guy who loves technology"],
         loop: true,
-        delaySpeed: 1500,
+        typeSpeed:40,
+        deleteSpeed:40,
+        delaySpeed:2000
+        
     })
 
     return (
@@ -24,9 +27,22 @@ const Hero = () => {
             <BackgroundCircle />
 
 
-            <img className='relative rounded-full h-40 w-40 mx-auto object-cover'
+            <motion.img className='relative rounded-full h-[250px] w-[250px] mx-auto object-cover'
                 src='/DP_CROPPED.jpg'
                 alt="Profile Picture of Suman" 
+                initial={{
+                    opacity:0,
+                    scale:[0.1,0.3,0.7]
+                }}
+                animate={{
+                    opacity:1,
+                    scale:[1,1.5,1]
+                    
+            
+                }}
+                transition={{
+                    duration:1
+                }}
                 />
             
             
@@ -45,7 +61,7 @@ const Hero = () => {
                     <Link href='#experience'>
                     <button className='heroButton'>Experience</button>
                     </Link>
-                    <Link href='skills'>
+                    <Link href='#skills'>
                     <button className='heroButton'>Skills</button>
                     </Link>
                     <Link href='#projects'>
