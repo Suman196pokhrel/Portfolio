@@ -17,7 +17,9 @@ const Projects = () => {
             <h3 className='absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl'>Projects</h3>
 
 
-            <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+            <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
+             scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin
+            '>
                 {/* Each Projects  */}
                 {projects.map((project, i) => (
                     <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center 

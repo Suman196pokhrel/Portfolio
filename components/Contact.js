@@ -13,7 +13,7 @@ const Contact = () => {
     const onSubmit = formData => {
         // console.log(formData);
         window.location.href = `mailto:emusk196@gmail.com?subject=${formData.subject}&body=Hi my name is ${formData}.${formData.message} (${formData.email})`
-
+        
 
     }
 
