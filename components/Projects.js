@@ -1,9 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { urlFor } from '../sanity'
 
-const Projects = () => {
+const Projects = ({projects}) => {
 
-    const projects = [1, 2, 3, 4, 5, 6]
+    // const projects = [1, 2, 3, 4, 5, 6]
 
     return (
         <motion.div
@@ -21,15 +22,15 @@ const Projects = () => {
              scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin
             '>
                 {/* Each Projects  */}
-                {projects.map((project, i) => (
+                {projects?.map((project, i) => (
                     <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center 
-                        justify-center p-20 md:p-44 h-screen' key={i}>
+                        justify-center p-20 md:p-44 h-screen' key={project._id}>
                         <motion.img
                             initial={{y:-300,opacity:0}}
                             transition={{duration:1.2}}
                             whileInView={{opacity:1,y:0}}
                             viewport={{once:true}}
-                            src="https://th.bing.com/th/id/OIP.-NHfsnk5mf2tjwKlJvBpEQHaEo?pid=ImgDet&rs=1"
+                            src={urlFor(project.image).url()}
                             alt="smthing"
                         />
                         <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
@@ -37,10 +38,11 @@ const Projects = () => {
                             <h4 className='text-4xl font-semibold text-center'>
                                 <span className='underline decoration-[#F7AB0A]'>
                                     Case Study {i + 1} of {projects.length}:
-                                </span>Calculator App
+                                </span>{project.title}
                             </h4>
 
-                            <p className='text-lg text-center md:text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim est maiores adipisci, harum dolore fuga eligendi vitae corporis earum? Labore suscipit magni corrupti! Laborum, optio dicta ut reprehenderit possimus, eius iste odio placeat modi tenetur saepe in voluptatem molestiae exercitationem dolore doloribus totam cupiditate repudiandae reprehenderit, saepe praesentium?
+                            <p className='text-lg text-center md:text-left'>
+                                {project.summary}
                             </p>
                         </div>
                     </div>

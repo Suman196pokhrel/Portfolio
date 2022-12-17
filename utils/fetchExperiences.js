@@ -3,5 +3,7 @@ export const fetchExperiences = async ()=>{
     const data = await res.json()
     const experiences = data.experiences
 
+    console.log(experiences)
+
     return experiences
 }

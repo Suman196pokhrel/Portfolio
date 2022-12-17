@@ -7,7 +7,7 @@ import {
     EnvelopeIcon
 } from '@heroicons/react/24/outline'
 
-const Contact = () => {
+const Contact = ({pageInfo}) => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = formData => {
@@ -34,15 +34,15 @@ const Contact = () => {
                 <div className='space-y-10'>
                     <div className='flex items-center space-x-5'>
                         <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>+97798980909</p>
+                        <p className='text-2xl'>+{pageInfo.phoneNumber}</p>
                     </div>
                     <div className='flex items-center space-x-5'>
                         <MapIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>123 Lane, Baker Street</p>
+                        <p className='text-2xl'>{pageInfo.address}</p>
                     </div>
                     <div className='flex items-center space-x-5'>
                         <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>emusk196@gmail.com</p>
+                        <p className='text-2xl'>{pageInfo.email}</p>
                     </div>
                 </div>
 

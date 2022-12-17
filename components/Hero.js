@@ -3,12 +3,13 @@ import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircle from './BackgroundCircle'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { urlFor } from '../sanity'
 
 
-const Hero = () => {
+const Hero = ({pageInfo}) => {
 
     const [text, count] = useTypewriter({
-        words: ["Hi , The name's Suman-Pokhrel. A guy who loves technology"],
+        words: [`Hi , The name's ${pageInfo?.name}`, `A guy who loves technology`],
         loop: true,
         typeSpeed:40,
         deleteSpeed:40,
@@ -28,7 +29,7 @@ const Hero = () => {
 
 
             <motion.img className='relative rounded-full h-[250px] w-[250px] mx-auto object-cover'
-                src='/DP_CROPPED.jpg'
+                src={urlFor(pageInfo?.heroImage).url()}
                 alt="Profile Picture of Suman" 
                 initial={{
                     opacity:0,
@@ -48,7 +49,7 @@ const Hero = () => {
             
             
             <div className='z-20'>
-                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[5px]'>Data Science and FrontEnd Enthusiast</h2>
+                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[5px]'>{pageInfo.role}</h2>
                 <h1 className='text-3xl lg:text-5xl font-semibold px-10'>
                     <span className='mr-3'>{text}</span>
                     <Cursor cursorColor='yellow' />

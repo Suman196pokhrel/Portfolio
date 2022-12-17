@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 
-const Header = () => {
+const Header = ({socials}) => {
     return (
         <header className='sticky top-0 flex items-start 
         p-5 justify-between max-w-7xl mx-auto z-20 
@@ -25,11 +25,14 @@ const Header = () => {
                     duration: 1.3
                 }}
             >
-
-                <SocialIcon url='https://twitter.com/Suman98908583' fgColor='gray' bgColor='transparent' />
-                <SocialIcon url='https://www.instagram.com/spokhrel196/' fgColor='gray' bgColor='transparent' />
-                <SocialIcon url='https://www.linkedin.com/in/suman-pokhrel-a645a6185/' fgColor='gray' bgColor='transparent' />
-                <SocialIcon url='https://github.com/Suman196pokhrel' fgColor='gray' bgColor='transparent' />
+                {socials.map((social,i)=>(
+                    <SocialIcon 
+                    key={social.id} 
+                    url={social.url} 
+                    fgColor='gray' 
+                    bgColor='transparent' 
+                    />
+                ))}
 
             </motion.div>
 

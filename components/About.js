@@ -1,7 +1,11 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import { urlFor } from '../sanity'
 
-const About = () => {
+
+
+
+const About = ({pageInfo}) => {
   return (
     <motion.div 
     initial={{opacity:0}}
@@ -16,7 +20,8 @@ const About = () => {
         <br />
         <br />
 
-        <motion.img src='/DP_2_CROPPED.jpg' 
+        <motion.img 
+         src={urlFor(pageInfo?.profilePic).url()}
         className='mt-5 h-[300px] w-[200px]  md:mb-0 flex-shrink-0
         object-cover 
         md:rounded-lg md:h-[400px]  md:w-[300px] 
@@ -46,7 +51,9 @@ const About = () => {
                 <span className='underline decoration-[#F7AB0A]/50'> ittle</span> 
                 &nbsp;background
                 </h4>
-                <p className='text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam corporis quos sequi ipsam voluptas itaque quod eum recusandae at quidem provident delectus illum dolor, totamboriosam dolore dolorum? Veritatis id ipsa nihil qui ut modi non, dignissimos atque, beatae reiciendis, ipsam eligendi dolor odio quaerat inventore commodi molestias necessitatibus accusamus optio statum. Atque eius expedita hil qui ut modi non, dignissimos atque, beatae reiciendis, ipsam eligendi dolor odio quaerat inventore commodi molestventore commodi molestias necessitatibus accusamus optio statum. Atque eius expedita hil qui ut modi non, dias necessitatibus accusamus optio similique impediipsa dolore perspiciatis?</p>
+                <p className='text-base'>
+                    {pageInfo.backgroundInformation}
+                </p>
         </div>
         
     
