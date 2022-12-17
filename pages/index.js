@@ -7,8 +7,14 @@ import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import WorkExperience from '../components/WorkExperience'
+import fetchPageInfo from '../utils/fetchPageInfo'
+import fetchExperiences from '../utils/fetchExperiences'
+import fetchProjects from '../utils/fetchProjects'
+import fetchSkills from '../utils/fetchSkills'
+import fetchSocials from '../utils/fetchSocials'
 
-export default function Home() {
+
+export default function Home({pageInfo,experiences,socials,skills,projects}) {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
     overflow-y-scroll overflow-x-hidden z-0 space-y-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
@@ -19,37 +25,31 @@ export default function Home() {
 
       <Header />
 
-      {/* Hero Section  */}
       <section id='hero' className='snap-start' >
         <Hero />
       </section>
 
-      {/* About  */}
       <section id="about" className='snap-center' >
         <About />
       </section>
 
 
 
-      {/* Experience Section  */}
       <section id="experience" className='snap-center'>
         <WorkExperience />
       </section>
 
 
-      {/* Skills  */}
       <section id="skills" className='snap-start'>
         <Skills />
       </section>
 
 
-      {/* Projects  */}
       <section id='projects' className='snap-start'>
         <Projects />
       </section>
 
 
-      {/* Contact  */}
       <section id="contact" className='snap-start'>
         <Contact />
       </section>
@@ -66,4 +66,30 @@ export default function Home() {
 
     </div>
   )
+}
+
+
+export const getStaticProps= async ()=>{
+
+  const pageInfo = await fetchPageInfo();
+  const experiences = await fetchExperiences()
+  const socials = await fetchSocials()
+  const skills = await fetchSkills()
+  const projects = await fetchProjects()
+
+
+
+  return {
+    props:{
+      pageInfo,
+      experiences,
+      socials,
+      skills,
+      projects
+    },
+    revalidate:10
+  }
+
+
+  
 }
