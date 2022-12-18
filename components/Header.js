@@ -7,7 +7,7 @@ const Header = ({socials}) => {
     return (
         <header className='sticky top-0 flex items-start 
         p-0 justify-between max-w-7xl mx-auto z-20 md:p-5
-        md:items-center bg-black'>
+        md:items-center '>
 
             {/* social Icons  */}
             <motion.div

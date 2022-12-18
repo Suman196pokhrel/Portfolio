@@ -19,8 +19,7 @@ const Hero = ({pageInfo}) => {
 
     return (
         <motion.div
-            className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden
-            md:bg-black'
+            className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'
             initial={{
 
             }}
