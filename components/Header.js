@@ -28,7 +28,7 @@ const Header = ({socials}) => {
             >
                 {socials.map((social,i)=>(
                     <SocialIcon 
-                    key={social.id} 
+                    key={social._id} 
                     url={social.url} 
                     fgColor='gray' 
                     bgColor='transparent'
