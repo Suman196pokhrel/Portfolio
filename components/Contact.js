@@ -19,7 +19,7 @@ const Contact = ({pageInfo}) => {
 
     return (
         <motion.div
-            className='h-screen relative flex flex-col text-center md:text-left 
+            className='h-screen relative flex flex-col flex-shrink-0 text-center md:text-left bg-red-300 md:bg-orange-500
             md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
         >
 
@@ -27,7 +27,7 @@ const Contact = ({pageInfo}) => {
 
             <div className='flex flex-col space-y-10'>
 
-                <h4 className='text-4xl font-semibold text-center'>I have got just what you need.{" "}
+                <h4 className='text-2xl md:text-4xl font-semibold text-center'>I have got just what you need.{" "}
                     <span className='decoration-[#F7AB0A]/50 underline'>Let's Talk</span>
                 </h4>
 

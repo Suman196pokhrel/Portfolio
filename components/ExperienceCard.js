@@ -4,8 +4,8 @@ import { urlFor } from '../sanity'
 
 const ExperienceCard = ({ experience }) => {
     return (
-        <motion.article className=' flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-        w-[500px] xl:w-[500px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100
+        <motion.article className=' flex flex-col rounded-lg items-center space-y-5 flex-shrink-0
+        w-screen md:w-[650px]  snap-center bg-[#292929] p-10 md:px-2  opacity-40 hover:opacity-100
         cursor-pointer transition-opacity duration-300 overflow-hidden '>
             <motion.img
                 initial={{ y: -100, opacity: 0 }}
@@ -19,8 +19,8 @@ const ExperienceCard = ({ experience }) => {
 
 
             <div className='px-0 md:px-10'>
-                <h4 className='text-4xl font-light'>CEO of PAPAFAM</h4>
-                <p className='font-bold text-2xl mt-1'>PAPAFAM</p>
+                <h4 className='text-2xl font-light'>CEO of PAPAFAM</h4>
+                <p className='font-bold text-xl mt-1'>PAPAFAM</p>
                 <div className='flex space-x-3 my-2'>
 
                     {experience.technologies?.map((tech) => (
@@ -47,6 +47,7 @@ const ExperienceCard = ({ experience }) => {
 
                 </ul>
             </div>
+
         </motion.article>
     )
 }
