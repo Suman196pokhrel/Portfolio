@@ -4,8 +4,6 @@ import { urlFor } from '../sanity'
 
 const Projects = ({projects}) => {
 
-    // const projects = [1, 2, 3, 4, 5, 6]
-
     return (
         <motion.div
         initial={{opacity:0}}

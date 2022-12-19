@@ -3,5 +3,7 @@ export const fetchPageInfo = async ()=>{
     const data = await res.json()
     const pageInfo = data.pageInfo
 
+    console.log("Inisde PageInfo Helper fetch function")
+
     return pageInfo
 }

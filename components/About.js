@@ -49,7 +49,7 @@ const About = ({pageInfo}) => {
                 &nbsp;
                 </h4>
                 <p className='text-base'>
-                    {pageInfo.backgroundInformation}
+                    {pageInfo?.backgroundInformation}
                 </p>
         </div>
         

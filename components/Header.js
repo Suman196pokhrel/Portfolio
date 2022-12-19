@@ -26,7 +26,7 @@ const Header = ({socials}) => {
                     duration: 1.3
                 }}
             >
-                {socials.map((social,i)=>(
+                {socials?.map((social,i)=>(
                     <SocialIcon 
                     key={social._id} 
                     url={social.url} 
