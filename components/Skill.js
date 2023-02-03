@@ -12,8 +12,8 @@ const Skill = ({ directionLeft ,skill}) => {
           opacity: 0
         }}
         className='rounded-full border border-gray-500 object-cover w-14 h-14 md:w-32 md:h-32
-        filter group-hover:grayscale transition duration-300 ease-in'
-        transition={{ duration: 1 }}
+        filter group-hover:grayscale  transition ease-out'
+        transition={{ duration: 0.5 }}
         whileInView={{ opacity: 1, x: 0 }}
         src={urlFor(skill.image).url()}
         
