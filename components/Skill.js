@@ -21,7 +21,7 @@ const Skill = ({ directionLeft ,skill}) => {
       />
       <div className='flex items-center justify-center absolute opacity-0 hover:opacity-80 
       transition duration-300 ease-in group-hover:bg-white  w-14 h-14 md:w-32 md:h-32 rounded-full z-0'>
-        <p className='text-3xl font-bold text-black opacity-100'>{skill.progress}%</p>
+        <p className='text-lg font-bold text-black opacity-100'>{skill.title}</p>
       </div>
 
     </div>

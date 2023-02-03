@@ -9,11 +9,11 @@ import { urlFor } from '../sanity'
 const Hero = ({pageInfo}) => {
 
     const [text, count] = useTypewriter({
-        words: [`Hi , The name's ${pageInfo?.name}`, `A guy who loves technology`],
+        words: [`Greetings, I am ${pageInfo?.name}`, `A passionate technology professional.`],
         loop: true,
         typeSpeed:40,
         deleteSpeed:40,
-        delaySpeed:2000
+        delaySpeed:3000
         
     })
 
@@ -59,9 +59,9 @@ const Hero = ({pageInfo}) => {
                     <Link href='#about'>
                     <button className='heroButton'>About</button>
                     </Link>
-                    <Link href='#experience'>
+                    {/* <Link href='#experience'>
                     <button className='heroButton'>Experience</button>
-                    </Link>
+                    </Link> */}
                     <Link href='#skills'>
                     <button className='heroButton'>Skills</button>
                     </Link>

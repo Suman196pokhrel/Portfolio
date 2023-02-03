@@ -16,7 +16,7 @@ const Skills = ({ skills }) => {
 
             <h3 className='absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl'>Skills</h3>
 
-            <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Hover over a skill for current proficiency</h3>
+            {/* <h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>Hover over a skill for current proficiency</h3> */}
 
             <div className='mt-[100px] grid grid-cols-4 gap-5'>
 
