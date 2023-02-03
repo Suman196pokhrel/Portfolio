@@ -45,10 +45,10 @@ const About = ({pageInfo}) => {
         <div className='space-y-10 px-0 md:px-10'>
             <h4 className='text-4xl font-semibold'>
                 Here's a &nbsp;
-                <span className='underline decoration-[#F7AB0A]/50'>little background</span> 
+                <span className='underline decoration-[#F7AB0A]/50'>Little Background</span> 
                 &nbsp;
                 </h4>
-                <p className='text-base'>
+                <p className='lg:text-lg md:text-sm sm:text-sm text-justify'>
                     {pageInfo?.backgroundInformation}
                 </p>
         </div>
