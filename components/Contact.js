@@ -72,7 +72,6 @@ const Contact = ({ pageInfo }) => {
                 </div>
 
 
-
                 <form
                     onSubmit={handleSubmit(onSubmit)}
                     className='flex flex-col space-y-2 w-screen md:w-fit mx-auto p-5'>
