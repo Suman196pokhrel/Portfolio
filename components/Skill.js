@@ -11,7 +11,7 @@ const Skill = ({ directionLeft ,skill}) => {
           x: directionLeft ? -100 : 100,
           opacity: 0
         }}
-        className='rounded-full border border-gray-500 object-cover w-14 h-14 md:w-32 md:h-32
+        className='rounded-full border border-gray-500 object-cover w-16 h-16 md:w-32 md:h-32
         filter group-hover:grayscale  transition ease-out'
         transition={{ duration: 0.5 }}
         whileInView={{ opacity: 1, x: 0 }}

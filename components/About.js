@@ -21,7 +21,7 @@ const About = ({pageInfo}) => {
 
         <motion.img 
          src={urlFor(pageInfo?.profilePic).url()}
-        className='mt-[120px] h-[300px] w-[200px]  md:mb-0 flex-shrink-0 object-cover 
+        className='mt-[200px] md:mt-[100px]  h-[300px] w-[200px]  md:mb-0 flex-shrink-0 object-cover 
         md:rounded-lg md:h-[400px]  md:w-[300px] xl:h-[500px] xl:w-[400px]' 
 
         initial={{
