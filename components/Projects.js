@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { urlFor } from '../sanity'
 
 const Projects = ({ projects }) => {
+    // console.log(projects)
 
     return (
         <motion.div
@@ -15,35 +16,37 @@ const Projects = ({ projects }) => {
 
             <h3 className='absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl'>PROJECTS</h3>
 
-            <div className='mt-[80px] grid grid-cols-2 gap-2 p-2'>
+            <div className='mt-[80px] grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 p-6'>
 
                 {projects?.map((project, i) => (
-                    <div className='groupp-1  relative p-1 
-                                    rounded-md flex-col justify-center text-center 
-                                    content-center cursor-pointer
-                                    ' key={project._id}>
+                    <div className='relative p-1 rounded-lg flex-col justify-center text-center 
+                                    content-center cursor-pointer  h-28  md:h-72 w-full md:w-full  m-4 object-fit 
+                                    ' 
+                        key={project._id}
+                        onClick={()=>window.open(project.linkToBuild,'_blank', 'noopener,noreferrer')}
+                    >
                         <motion.img
-                            className=' border border-gray-500  rounded-md
-                            object-cover  h-28 '
+                            className=' border border-gray-500  rounded-xl p-0 m-0
+                             h-full w-full'
                             initial={{
                                 y: -150,
-                                opacity:0
+                                opacity: 0
                             }}
                             transition={{ duration: 0.5 }}
-                            whileInView={{ opacity: 1, y:0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             src={urlFor(project.image).url()}
 
                             alt='skill dp'
                         />
-                        <p className='text-xs text-gray-400 '
+                        <p className='text-xs md:text-xl text-slate-300 '
                         >{project.title}</p>
                     </div>
-                        
-                    
+
+
 
                 ))}
 
-                    </div>
+            </div>
 
 
         </motion.div>

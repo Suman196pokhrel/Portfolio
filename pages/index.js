@@ -6,17 +6,16 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
-import WorkExperience from '../components/WorkExperience'
 
 
 import { fetchPageInfo } from '../utils/fetchPageInfo'
-import { fetchExperiences } from '../utils/fetchExperiences'
 import { fetchProjects } from '../utils/fetchProjects'
 import { fetchSkills } from '../utils/fetchSkills'
 import { fetchSocials } from '../utils/fetchSocials'
+import { calcLength } from 'framer-motion'
 
 
-export default function Home({ pageInfo, experiences, socials, skills, projects }) {
+export default function Home({ pageInfo,socials, skills, projects }) {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
     overflow-y-scroll overflow-x-hidden z-0 space-y-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
@@ -35,11 +34,6 @@ export default function Home({ pageInfo, experiences, socials, skills, projects 
         <About pageInfo={pageInfo} />
       </section>
 
-
-
-      {/* <section id="experience" className='snap-center'>
-        <WorkExperience experiences={experiences} />
-      </section> */}
 
 
       <section id="skills" className='snap-start'>
@@ -76,8 +70,9 @@ export async function getStaticProps(context) {
   console.log("Running GetStaticProps Function")
 
   const pageInfo = await fetchPageInfo();
-  const experiences = await fetchExperiences()
+  console.log("Passed first Fetch")
   const socials = await fetchSocials()
+  console.log("Passed second Fetch")
   const skills = await fetchSkills()
   const projects = await fetchProjects()
 
@@ -86,13 +81,10 @@ export async function getStaticProps(context) {
   return {
     props: {
       pageInfo,
-      experiences,
       socials,
       skills,
       projects
     },
-
-    revalidate: 10,
   }
 
 

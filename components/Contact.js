@@ -45,7 +45,7 @@ const Contact = ({ pageInfo }) => {
               
                     className='flex items-center space-x-5'>
                         <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                        <p className='text-xl md:text-2xl'>+{pageInfo?.phoneNumber}</p>
+                        <p className='text-xl md:text-2xl'>{pageInfo?.phoneNumber}</p>
                     </motion.div>
                     <motion.div
                      initial={{
