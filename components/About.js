@@ -15,14 +15,14 @@ const About = ({pageInfo}) => {
     md:text-left md:flex-row max-w-7xl justify-center
     mx-auto items-center px-5 '>
     
-        <h3 className='absolute  top-[80px] md:top-[150px] text-gray-500
+        <h3 className='absolute  top-[80px] md:top-[150px] md:mt-[-50px] xl:top-[150px] text-gray-500
         uppercase tracking-[20px] text-2xl'>About</h3>
 
 
         <motion.img 
          src={urlFor(pageInfo?.profilePic).url()}
         className='mt-[200px] md:mt-[100px]  h-[300px] w-[200px]  md:mb-0 flex-shrink-0 object-cover 
-        md:rounded-lg md:h-[400px]  md:w-[300px] xl:h-[500px] xl:w-[400px]' 
+        md:rounded-lg md:h-[400px]  md:w-[300px]    xl:h-[500px] xl:w-[400px]' 
 
         initial={{
             x:-200,

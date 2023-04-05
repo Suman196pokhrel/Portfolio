@@ -17,7 +17,7 @@ import { calcLength } from 'framer-motion'
 
 export default function Home({ pageInfo,socials, skills, projects }) {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
+    <div className='bg-[rgb(36,36,36)] text-white h-screen
     overflow-y-scroll overflow-x-hidden z-0 space-y-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
       <Head>
         <title>Suman pokhrel's - Portfolio</title>
@@ -26,27 +26,27 @@ export default function Home({ pageInfo,socials, skills, projects }) {
 
       <Header socials={socials} />
 
-      <section id='hero' className='snap-start' >
+      <section id='hero' className='' >
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id="about" className='snap-center' >
+      <section id="about" className='' >
         <About pageInfo={pageInfo} />
       </section>
 
 
 
-      <section id="skills" className='snap-start'>
+      <section id="skills" className=''>
         <Skills skills={skills} />
       </section>
 
 
-      <section id='projects' className='snap-start'>
+      <section id='projects' className=''>
         <Projects projects={projects} />
       </section>
 
 
-      <section id="contact" className='snap-start'>
+      <section id="contact" className=''>
         <Contact pageInfo={pageInfo} />
       </section>
 
